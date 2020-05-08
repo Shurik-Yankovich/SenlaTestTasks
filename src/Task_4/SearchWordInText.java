@@ -24,18 +24,18 @@ public class SearchWordInText {
         int countNotStrictMatch;
         int countStrictMatch;
         countNotStrictMatch = notStrictWordMatchInText(word, text);
-        System.out.println(String.format("В тексте:\n%s\nне строгих совпадений слова %s найдено %d.", text, word, countNotStrictMatch));
+        System.out.println(String.format("В тексте:\n%s\nне строгих совпадений слова [%s] найдено %d.", text, word, countNotStrictMatch));
         countStrictMatch = strictWordMatchInText(word, text);
-        System.out.println(String.format("В тексте:\n%s\nстрогих совпадений слова %s найдено %d.", text, word, countStrictMatch));
+        System.out.println(String.format("В тексте:\n%s\nстрогих совпадений слова [%s] найдено %d.", text, word, countStrictMatch));
     }
 
-    public static int notStrictWordMatchInText(String word, String text) {
+    private static int notStrictWordMatchInText(String word, String text) {
         int count;
         count = text.split(word, -1).length - 1;
         return count;
     }
 
-    public static int strictWordMatchInText(String word, String text) {
+    private static int strictWordMatchInText(String word, String text) {
         int count = 0;
         String[] words = text.split(" ");
         for (String wordInText : words) {
