@@ -5,7 +5,7 @@ package Task_5;
 
 import java.util.Scanner;
 
-public class Main {
+public class SearchPalindromes {
 
     private static final int MAXIMUM_SEQUENCE_LIMIT = 100;
 
